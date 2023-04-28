@@ -1,0 +1,14 @@
+//writing values of variables to screen
+import <iostream>;
+
+int main(int argc, char* argv[])
+{
+	int value1{0xA}; //hex
+	int value2{ 010 }; //oct
+	int value3{0b1010}; //binary
+
+	std::cout << value1 << value2 << value3 << std::endl;
+
+	system("pause");
+	return 0;
+}
