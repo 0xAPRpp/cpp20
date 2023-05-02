@@ -1,11 +1,11 @@
-//Converting distances
+//Converting distances //Don't add comments that are already documented
 import <iostream>;
 
 int main(int argc, char* argv[])
 {
 	float yards{}, feet{}, inches{}; //float is faster
-	float inches_in_feet{ 12 };
-	float inches_in_yards{ 36 };
+	const float inches_in_feet{ 12 }; //use const for values that don't change 
+	const float inches_in_yards{ 36 };
 
 	//calculating inches
 	std::cin >> yards >> feet >> inches;
