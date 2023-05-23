@@ -78,6 +78,12 @@ int main(int argc, char* argv[])
 	std::cout << std::format
 	("\ntesting [fill/align][\"sign\"][\"alternate form\"][fill 0][width][\"precision\"][type] - {:^021B}", true);
 
+	//Argument Indexes
+	std::cout << "\n\nArgument Indexes" << std::endl;
+	std::cout << std::format
+	("\ntesting [fill/align][sign][\"alternate form\"][\"fill 0\"][width][\"precision\"][type] - {2:=^20b}, {1:=^20b} and {0:=^20b}\n", 'a', 'b', 'c');
+	std::cout << std::format
+	("\ntesting [fill/align][sign][\"alternate form\"][\"fill 0\"][width][\"precision\"][type] - {2:=^20d}, {1:=^20d} and {0:=^20d}\n", 'a', 'b', 'c');
 
 	system("pause");
 	return 0;
