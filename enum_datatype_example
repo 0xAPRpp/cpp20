@@ -1,0 +1,40 @@
+//An example using enumerated data type
+
+import<iostream>;
+import<format>;
+
+int main(int argc, char* argv[])
+{
+	const unsigned value1{ 101 };
+
+	enum class Day:unsigned int 
+	{Monday = 1, Mon = Monday, Tuesday, Tue = 2, Wednesday = value1, Thursday, Friday, Saturday, Sunday};
+
+	enum class Punctuation 
+	{ Apostrophe = '\'', Comma = ',', Exclamation = '!', Parentheses_Open = '(', Parentheses_Close = ')',
+		Underscore = '_', Question_Mark = '?'
+	};
+
+	Day yesterday{Day::Mon};
+	Day poets_day{ Day::Friday };
+	Day today{Day::Thursday};
+
+	std::cout << std::format("yesterday{}s value is {}{} but poets_day{}s is {}{}",
+		static_cast<char>(Punctuation::Apostrophe),
+		static_cast<int>(yesterday), static_cast<char>(Punctuation::Comma),
+		static_cast<char>(Punctuation::Apostrophe),
+		static_cast<int>(poets_day), static_cast<char>(Punctuation::Exclamation)
+		);
+
+	std::cout << std::format("\nIs today{}s value{}{}{} the same as poets_day{}{}{}{}\n",
+		static_cast<char>(Punctuation::Apostrophe),
+		static_cast<char>(Punctuation::Parentheses_Open), static_cast<int>(Day::Thursday),
+		static_cast<char>(Punctuation::Parentheses_Close),
+		static_cast<char>(Punctuation::Parentheses_Open), static_cast<int>(poets_day),
+		static_cast<char>(Punctuation::Parentheses_Close), static_cast<char>(Punctuation::Question_Mark)
+	);
+
+
+	system("pause");
+	return 0;
+}
