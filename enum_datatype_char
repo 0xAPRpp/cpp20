@@ -1,0 +1,17 @@
+//enumerated data type with char
+
+import <iostream>;
+import <format>;
+
+int main(int argc, char* argv[])
+{
+	enum class Punctuation {Comma = ',', Exclamation = '!' };
+
+	Punctuation value1{ Punctuation::Comma };
+
+	std::cout << static_cast<int>(value1) << std::endl;
+	std::cout << static_cast<char>(value1) << std::endl;
+
+	return 0;
+	system("pause");
+}
