@@ -1,0 +1,19 @@
+//A simple bool program
+
+import <iostream>;
+import <format>;
+
+int main(int argc, char* argv[])
+{
+	char ch1{}, ch2{};
+	std::cin >> ch1 >> ch2;
+
+	std::cout << std::format(
+		"The value of the expression {}<{} is {}", ch1, ch2, (ch1 < ch2));
+
+	std::cout << std::format(
+		"\nThe value of the expression {}<{} is {}\n", ch1, ch2, static_cast<unsigned>(ch1 == ch2));
+
+	system("pause");
+	return 0;
+}
