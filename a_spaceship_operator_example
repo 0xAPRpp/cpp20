@@ -1,0 +1,18 @@
+//A spaceship operator example
+
+import <iostream>;
+import <format>;
+import <compare>;
+
+int main(int argc, char* argv)
+{
+	int a{}, b{};
+	std::cin >> a >> b;
+
+	std::cout << std::format("{}\n", ((a <=> b) == std::strong_ordering::less));
+	std::cout << std::format("{}\n", ((a <=> b) == std::strong_ordering::greater));
+	std::cout << std::format("{}\n", ((a <=> b) == std::strong_ordering::equal));
+
+	system("pause");
+	return 0;
+}
