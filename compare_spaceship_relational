@@ -1,0 +1,32 @@
+//comparing a spaceship operator with relational operators
+
+import <iostream>;
+import <format>;
+import <compare>;
+
+int main(int argc, char* argv)
+{
+	int score{};
+	std::cin >> score;
+
+	if (score < 100)
+		std::cout << "No reward" << std::endl;
+	else if(score > 100)
+		std::cout << "okay reward" << std::endl;
+	else
+		std::cout << "great reward" << std::endl;
+
+	std::strong_ordering ordering{score <=> 100};
+
+	if(ordering == std::strong_ordering::less)
+		std::cout << "No reward" << std::endl;
+	else if (ordering == std::strong_ordering::greater)
+		std::cout << "okay reward" << std::endl;
+	else if (ordering == std::strong_ordering::equal)
+		std::cout << "great reward" << std::endl;
+
+	//Using a spaceship operator here makes the statements more verbose
+
+	system("pause");
+	return 0;
+}
