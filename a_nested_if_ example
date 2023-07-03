@@ -1,0 +1,35 @@
+//An nested if example
+
+import <iostream>;
+import <format>;
+
+int main(int argc, char* argv[])
+{
+	char ch{};
+	std::cout << "Enter a letter: ";
+	std::cin >> ch;
+
+	if (ch >= 'A')
+	{
+		if (ch <= 'Z')
+		{
+			std::cout << "You entered an uppercase letter." << std::endl;
+			return 0;
+		}
+	}
+
+
+	if (ch >= 'a')
+	{
+		if (ch <= 'z')
+		{
+			std::cout << "You entered a smallercase letter." << std::endl;
+			return 0;
+		}
+	}
+
+	std::cout << "You did not enter a letter." << std::endl;
+
+	system("pause");
+	return 0;
+}
