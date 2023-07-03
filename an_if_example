@@ -1,0 +1,25 @@
+//An if example
+
+import <iostream>;
+import <format>;
+
+int main(int argc, char* argv[])
+{
+	int val{};
+	std::cout << "Enter an integer between 50 and 100: ";
+	std::cin >> val;
+
+	if (val != 0) // if(val) is another way to get the same effect
+		std::cout << "You have entered a value that is different from zero." << std::endl;
+
+	if(val < 50)
+		std::cout << "The value is invalid - it is less than 50." << std::endl;
+
+	if (val > 100)
+		std::cout << "The value is invalid - it is greater than 100." << std::endl;
+
+	std::cout << std::format("You entered {}.\n", val);
+
+	system("pause");
+	return 0;
+}
